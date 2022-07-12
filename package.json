@@ -1,0 +1,87 @@
+{
+  "name": "python-shell",
+	"displayName": "Python Shell",
+	"description": "The Python Interactive Shell, Right in Your Terminal!",
+	"version": "0.1.0",
+	"engines": {
+		"vscode": "^1.69.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "*"
+	],
+	"main": "./out/extension.js",
+	"tutorial": "/src/pythonshelltutorial.mp4",
+	"contributes": {
+		"commands": [
+			{
+				"command": "python-shell.open",
+				"title": "Open Python Interactive Shell"
+			}
+		],
+		"configuration": {
+			"title": "Python Shell",
+			"properties": {
+				"pythonshell.name": {
+				    "type": "string",
+				    "default": "Python Shell",
+				    "description": "What the shell should be called in the Terminal."
+				},
+				"pythonshell.path": {
+				    "type": "string",
+				    "default": "C:\\Python310\\python.exe",
+				    "description": "Filepath to python executable file (python.exe on windows)."
+				},
+				"pythonshell.icon": {
+				    "type": "string",
+				    "default": "terminal",
+				    "description": "ThemeIcon to be used to represent the Python Shell. A list can be found here: https://code.visualstudio.com/api/references/icons-in-labels#icon-listing"
+				},
+				"pythonshell.color": {
+				    "type": "string",
+				    "default": "default",
+				    "description": "Color for the ThemeIcon.",
+					"enum": [
+						"Black",
+						"Red",
+						"Green",
+						"Yellow",
+						"Blue",
+						"Magenta",
+						"Cyan",
+						"White",
+						"default"
+					]
+				},
+				"pythonshell.showNotification": {
+					"type": "boolean",
+					"default": "true",
+					"description": "Show terminal opening success notification."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.69.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"eslint": "^8.18.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.4",
+		"@vscode/test-electron": "^2.1.5"
+	}
+}

@@ -5,7 +5,6 @@ Use the Python Interactive Shell, right inside your terminal! This extension add
 
 Launch the python shell using the Command Pallete (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>). Type in `Open Python Interactive Shell` to launch the shell.
 
-![Howtouse](tutorial)
 ## Extension Settings
 
 * `pythonshell.name`: The name of the shell when it is launched. Defualt **Python 3.10**.
