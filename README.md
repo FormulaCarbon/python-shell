@@ -1,6 +1,8 @@
 # Python Shell 
 Use the Python Interactive Shell, right inside your terminal! This extension adds functionality to launch the python shell inside the VS Code Integrated Terminal.
 
+![howToUse](https://github.com/FormulaCarbon/python-shell/blob/main/src/pythonshelltutorial.mp4)
+
 ## Features
 
 Launch the python shell using the Command Pallete (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>). Type in `Open Python Interactive Shell` to launch the shell.
